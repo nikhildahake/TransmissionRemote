@@ -21,7 +21,9 @@ public class TorrentLoader {
     }
 
     public static void loadTorrentFromUri(Uri fileUri, Callback callback) {
-        if (fileUri == null || callback == null) return;
+        if (fileUri == null || callback == null) {
+            return;
+        }
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
         Handler mainHandler = new Handler(Looper.getMainLooper());
